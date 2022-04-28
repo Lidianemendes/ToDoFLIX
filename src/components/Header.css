@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 10;
+  height: 80px;
+  display: flex;
+  justify-content: space-betwen;
+  align-items: center;
+  padding: 0 30px;
+}
+h1 {
+  position: relative;
+  padding-right: 10vh;
+  height: 70px;
+  font-family: Open Sans, sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #e50914;
+}
+.Menu {
+  display: flex;
+  margin-top: 7vh;
+  cursor: pointer;
+}
+
+button {
+  background: #e50914;
+  top: 17px;
+  left: 704px;
+  width: 116px;
+  height: 33px;
+  text-align: center;
+  font: normal normal normal 13px/15px Arial;
+  letter-spacing: 0px;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
