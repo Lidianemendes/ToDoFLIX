@@ -6,7 +6,7 @@ import "./Movies.css";
 import Hedgehog from "./imagens/sonic2ofilme.jpg";
 import { createGlobalStyle } from "styled-components";
 import coracao from "./imagens/coracao.png";
-
+import valeu from "./imagens/valeu.png";
 const GlobalStyle = createGlobalStyle`
 *{
   margin:o;
@@ -17,9 +17,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 const Container = styled.div`
   width: 100%;
-  height: 54vh;
+  height: 53vh;
   padding-top: 15vh;
-  border: solid white;
 `;
 const Starimg = styled.div`
   display: flex;
@@ -29,7 +28,7 @@ const Starimg = styled.div`
   height: 35vh;
 `;
 const MainImg = styled.img`
-  width: 26%;
+  width: 25%;
   border-radius: 10px;
   box-shadow: inset 0 0 1em gold, 0 0 1em red;
   &:hover {
@@ -74,11 +73,11 @@ const Over = styled.p`
 const Starcarousel = styled.div`
   background-color: red;
   margin-top: 6vh;
-  border: solid white;
+  height: 100%;
 `;
 const Img = styled.img`
-  width: 290px;
-  height: 160px;
+  width: 250px;
+  height: 147px;
   border-radius: 10px;
   box-shadow: inset 0 0 1em gold, 0 0 1em red;
   &:hover {
@@ -99,7 +98,7 @@ const info = {
 
 const info1 = {
   isHalf: true,
-  size: 17,
+  size: 16,
   count: 1,
   char: "4/5 ♡",
   activeColor: "#00CD00",
@@ -243,6 +242,7 @@ export default class App extends React.Component {
               não está sozinho, ele se junta a Tails e eles embarcam em uma
               jornada para impedir o vilão..
             </Over>
+            <ReactStars {...info3} />
           </Inform>
         </Starimg>
         <Starcarousel>
@@ -256,7 +256,33 @@ export default class App extends React.Component {
             {this.state.Filmes.map((item) => (
               <>
                 <Img src={item.poster} alt="Capa" />
+                <Heart
+                  id="coracao"
+                  data-name="coracao"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="22"
+                  viewBox="0 0 21 22"
+                >
+                  <ellipse
+                    id="Ellipse_8"
+                    data-name="Ellipse 8"
+                    cx="10.5"
+                    cy="11"
+                    rx="10.5"
+                    ry="11"
+                    fill="#717171"
+                  />
+                  <path
+                    id="Path_407"
+                    data-name="Path 407"
+                    d="M865.16-1403.7l-.893-.813c-3.172-2.877-5.266-4.774-5.266-7.1a3.355,3.355,0,0,1,3.388-3.388,3.689,3.689,0,0,1,2.772,1.287,3.689,3.689,0,0,1,2.772-1.287,3.355,3.355,0,0,1,3.388,3.388c0,2.328-2.094,4.225-5.267,7.108Z"
+                    transform="translate(-854.5 1421)"
+                    fill="#b1b1b1"
+                  />
+                </Heart>
                 <Title>{item.Title}</Title>
+                <ReactStars {...info1} />
                 <MainSinopse>
                   <Sinopse>{item.descrição}</Sinopse>
                 </MainSinopse>

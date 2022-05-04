@@ -5,7 +5,6 @@ import "./Header.css";
 import Usuario from "./imagens/usuario.jpg";
 import Seta from "./imagens/seta aixo.png";
 import ToDo from "./ToDo";
-import Todos from "./Todos";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -86,7 +85,7 @@ export default class Header extends React.Component {
               </Category>
               <Menulist>
                 <li>
-                  <Linking to="./Todos">Todos</Linking>
+                  <Linking to="/Todos">Todos</Linking>
                 </li>
                 <li>
                   <Linking to="/favoritos">Favoritos</Linking>
