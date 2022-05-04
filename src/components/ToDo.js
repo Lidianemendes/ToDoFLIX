@@ -10,12 +10,20 @@ const GlobalStyle = createGlobalStyle`
     box-sizing:border-box;
 }
 `;
+const Input = styled.input`
+  padding-right: 17vh;
+  top: 17px;
+  left: 830px;
+  width: 350px;
+  height: 32px;
+  background: #2c2c2c 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+`;
 
 class App extends Component {
   state = {
     Filmes: "",
-    FilmesPesquisados: 
-    []
+    FilmesPesquisados: []
   };
 
   add = (event) => {
@@ -34,9 +42,8 @@ class App extends Component {
       FilmesPesquisados: FilmesPesquisados.concat(newTask),
       Filmes: ""
     }),
-      console.log(this.state.FilmesPesquisados)
+      console.log(this.state.FilmesPesquisados);
   };
-
 
   handleChange = (event) => {
     this.setState({
@@ -48,12 +55,19 @@ class App extends Component {
     return (
       <div>
         <form onSubmit={this.add}>
-          <input onChange={this.handleChange} value={this.state.Filmes} Img src={Pesquisa} alt="" Search type="text" placeholder="Pesquisar"/>
+          <Input
+            onChange={this.handleChange}
+            value={this.state.Filmes}
+            Img
+            src={Pesquisa}
+            alt=""
+            Search
+            type="text"
+            placeholder="Pesquisar"
+          />
           <ul>
             {this.state.FilmesPesquisados.map((item) => (
-              <li key={item.id}>
-                {item.text}
-              </li>
+              <li key={item.id}>{item.text}</li>
             ))}
           </ul>
         </form>
