@@ -9,8 +9,9 @@ export default class App extends React.Component {
     return (
       <Router>
         <Header />
-        <Movies />
+
         <Routes>
+          <Route path="/" element={<Movies />} />
           <Route path="/todos" element={<Todos />} />
         </Routes>
       </Router>

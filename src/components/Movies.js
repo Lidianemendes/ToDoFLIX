@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 const Container = styled.div`
   width: 100%;
-  height: 53vh;
+  height: 100%;
   padding-top: 15vh;
 `;
 const Starimg = styled.div`

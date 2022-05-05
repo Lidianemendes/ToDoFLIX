@@ -5,27 +5,35 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
 `;
-const Title = styled.h3`
+const TitleOne = styled.h3`
   color: white;
 `;
 
 const BoxImg = styled.img`
-  width: 30%;
-  height: 30vh;
+  width: 250px;
+  height: 147px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 1em gold, 0 0 1em red;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+`;
+
+const TitleTwo = styled.h4`
+  color: white;
+  font-size: 20px;
   object-fit: 100%;
 `;
-const BoxTitle = styled.h3`
-  color: white;
-  width: 10%;
-  height: 30vh;
-  object-fit: 100%;
-`;
-const BoxSynopsis = styled.p`
+const Synopsis = styled.p`
   color: white;
 `;
+
 const AllBoxes = styled.div`
-  width: 100%;
-  margin: 10%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20vh;
+  margin-left: 5vw;
 `;
 
 export default class Todos extends React.Component {
@@ -85,12 +93,12 @@ export default class Todos extends React.Component {
   render() {
     return (
       <Container>
-        <Title>Todos</Title>
+        <TitleOne>Todos</TitleOne>
         {this.state.Filmes.map((item) => (
           <AllBoxes>
             <BoxImg src={item.poster} alt="filmes" />
-            <BoxTitle src={item.Title} alt="titulo" />
-            <BoxSynopsis src={item.descrição} alt="sinopse" />
+            <TitleTwo>{item.Title}</TitleTwo>
+            <Synopsis>{item.descrição}</Synopsis>
           </AllBoxes>
         ))}
       </Container>
